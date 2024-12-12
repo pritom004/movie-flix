@@ -12,4 +12,10 @@
         @apply absolute content-[''] w-full h-1 left-0 bottom-[-4px] bg-indigo-300 
         scale-x-0 hover:scale-x-100 origin-bottom-right hover:origin-bottom-right transition-transform duration-300;
     }
+};
+
+@layer components{
+    .active {
+        @apply text-indigo-300
+    }
 }
