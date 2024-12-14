@@ -1,5 +1,6 @@
 import './index.css';
 import ErrorPage from './pages/ErrorPage'
+import getMovieData from './api/GetAPIData';
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import About from './pages/About'
@@ -23,7 +24,8 @@ export default function App() {
                 },
                 {
                   path: '/movie',
-                  element: <Movie />
+                  element: <Movie />,
+                  loader: getMovieData,
                 },
                 {
                   path: '/contact',

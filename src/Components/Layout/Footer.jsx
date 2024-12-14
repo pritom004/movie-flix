@@ -10,10 +10,10 @@ export default function Footer() {
     <div className='bg-gray-900 py-10'>
     <footer className='w-3/5 mx-auto px-32 '>
       <div className='flex space-x-2 text-3xl text-white'>
-      <CiFacebook />
-      <IoLogoInstagram />
-      <RxTwitterLogo/>
-      <PiYoutubeLogo />
+      <CiFacebook className='cursor-pointer hover:bg-white hover:text-black'/>
+      <IoLogoInstagram className='cursor-pointer hover:bg-white hover:text-black'/>
+      <RxTwitterLogo className='cursor-pointer hover:bg-white hover:text-black'/>
+      <PiYoutubeLogo className='cursor-pointer hover:bg-white hover:text-black'/>
       </div>
 
     <div className='mt-5 flex w-full justify-between text-gray-300 font-semibold'>
