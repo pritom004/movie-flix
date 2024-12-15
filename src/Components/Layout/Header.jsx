@@ -18,7 +18,7 @@ export default function Header() {
         <NavLink to='/' className='text-indigo-300 font-semibold'>MovieFlix</NavLink>
         <ul className="flex text-gray-800 gap-4 uppercase font-semibold">
           <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/about">About</NavLink></li>
-          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/movie">Movie</NavLink></li>
+          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/movies">Movie</NavLink></li>
           <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/">Home</NavLink></li>
           <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/contact">Contact</NavLink></li>
         </ul>
