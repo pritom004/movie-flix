@@ -9,6 +9,7 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 import AppLayout from './Components/Layout/AppLayout';
 import MoveDeatils from './Components/Ui/MoveDeatils';
 import getMovieDeatils from './Components/Ui/GetMovieDeatils';
+import { contactData } from './pages/Contact';
 export default function App() {
 
   document.title = "Movie Flix"
@@ -38,7 +39,8 @@ export default function App() {
                 },
                 {
                   path: '/contact',
-                  element: <Contact />
+                  element: <Contact />,
+                  action : contactData
                 }]
     }
   ])

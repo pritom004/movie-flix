@@ -15,12 +15,20 @@ export default function Header() {
   
 
       <div className='flex w-[97%] mx-auto py-4 px-56 shadow-sm justify-between'>
-        <NavLink to='/' className='text-indigo-300 font-semibold'>MovieFlix</NavLink>
-        <ul className="flex text-gray-800 gap-4 uppercase font-semibold">
-          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/about">About</NavLink></li>
-          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/movies">Movie</NavLink></li>
-          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/">Home</NavLink></li>
-          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-300" : "text-gray-500"}} to="/contact">Contact</NavLink></li>
+        <NavLink to='/' className='text-indigo-600 text-lg font-extrabold'>MovieFlix</NavLink>
+        <ul className="flex text-gray-800 gap-4 uppercase font-normal">
+          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-500" : "text-gray-500"}} to="/about">
+              <strong>About</strong>
+            </NavLink></li>
+          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-500" : "text-gray-500"}} to="/movies">
+              <strong>Movie</strong>
+            </NavLink></li>
+          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-500" : "text-gray-500"}} to="/">
+              <strong>Home</strong>
+            </NavLink></li>
+          <li className='underline-animation'><NavLink className={({isActive})=>{return isActive? "text-indigo-500" : "text-gray-500"}} to="/contact">
+              <strong>Contact</strong>
+            </NavLink></li>
         </ul>
       </div>
 
