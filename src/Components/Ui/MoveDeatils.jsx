@@ -1,11 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate} from "react-router-dom";
+import { SlArrowLeft } from "react-icons/sl";
 
 export default function MoveDeatils() {
   const Data = useLoaderData();
-  const [activeTab, setActiveTab] = useState("overview"); // State for managing the active tab
-
-  // Content for the "Overview" tab
+  const [activeTab, setActiveTab] = useState("overview"); 
+  const Navigate = useNavigate();
+  
   const OverviewContent = (
     <>
     <p className="mt-4 ml-4 text-gray-700 text-lg">
@@ -17,7 +19,7 @@ export default function MoveDeatils() {
     </>
   );
 
-  // Content for the "Details" tab
+  
   const DetailsContent = (
     <ul className="mt-4 ml-4 text-gray-700 text-lg space-y-4">
       <li><strong>Genre:</strong> {Data.Genre || "N/A"}</li>
@@ -31,6 +33,7 @@ export default function MoveDeatils() {
   );
 
   return (
+   
     <div className="flex mt-12 max-w-7xl justify-center mb-16 mx-auto">
       <div className="w-1/2 flex justify-start">
         <img
@@ -43,10 +46,13 @@ export default function MoveDeatils() {
       </div>
 
       <div className="flex flex-col w-1/2">
+      <div className="w-90 justify-between pb-3 flex">
+    <button onClick={() => {Navigate(-1);}} className=" text-xl font-semibold py-1 px-2 pr-5 pb-2 bg-blue-600 text-slate-200 shadow-md rounded-md flex items-center" >{<SlArrowLeft />}Go Back</button>
+    <button className="text-xl font-extralight py-1 px-5 bg-red-600 pb-2 text-slate-200 shadow-md rounded-md capitalize">#{Data.Type}</button>
+    </div>
         <h1 className="text-4xl font-semibold text-indigo-800">{Data.Title}</h1>
         <h2 className="text-2xl ml-2 text-gray-900">{Data.Released}</h2>
 
-        {/* Navigation Tabs */}
         <div className="font-bold flex gap-10 mt-20 ml-4 border-b-2 pb-2 border-gray-700">
           <button
             className={`${
@@ -66,12 +72,13 @@ export default function MoveDeatils() {
           </button>
         </div>
 
-        {/* Tab Content */}
+       
         <div className="mt-6">
           {activeTab === "overview" && OverviewContent}
           {activeTab === "details" && DetailsContent}
         </div>
       </div>
     </div>
+    
   );
 }

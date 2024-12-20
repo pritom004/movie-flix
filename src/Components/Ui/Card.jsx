@@ -5,6 +5,8 @@ export default function Card({data}) {
     const {Poster, Title, Year, imdbID} = data;
   return (
     <div className="cursor-pointer rounded-md w-64 mb-28 text-center shadow-2xl relative border">
+
+        
         
         <img src={Poster} alt={Title} className="w-4/5 mx-auto -translate-y-10 rounded shadow-xl"/>
         
